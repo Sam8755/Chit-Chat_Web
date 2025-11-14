@@ -50,7 +50,7 @@ async function getMessage(req, res) {
             participants: { $all: [senderId, recieverId] }
         }).populate("messages")
 
-        console.log("After Populate")
+        
         console.log(conversation?.messages);
 
         if (!conversation) {
